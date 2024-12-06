@@ -29,5 +29,3 @@ properties:
   HOOK_SECRET: 
       vault: APPZ_HOOK_SECRET
       
-
-
