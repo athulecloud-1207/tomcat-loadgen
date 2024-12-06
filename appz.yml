@@ -28,5 +28,6 @@ properties:
   nano : 435
   HOOK_SECRET: 
       vault: APPZ_HOOK_SECRET
+      
 
 
