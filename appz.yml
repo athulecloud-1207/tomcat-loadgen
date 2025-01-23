@@ -25,7 +25,7 @@ properties:
   next: 60
   download: true
   random : true
-  nano : 436
+  nano : 437
   HOOK_SECRET: 
       vault: APPZ_HOOK_SECRET
       
