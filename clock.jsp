@@ -20,12 +20,6 @@
               padding: 10px;
               height: 50px; /* Should be removed. Only for demonstration */
           }
-          .gap {
-              float: left;
-              width: 100%;
-              padding: 1px;
-              height: 1px; /* Should be removed. Only for demonstration */
-          }
 
           .column-mid {
               background-color:#3377ff;
@@ -36,7 +30,7 @@
           }
 
           .column-mid-white {
-              background-color:#3377ff;
+              background-color:<%=System.getProperty("head_color")%>;
               color: white;
               float: left;
               width: 25%;
@@ -53,7 +47,7 @@
           }
 
           .column-50-blue {
-              background-color:#3377e0;
+              background-color:blue;
               float: left;
               width: 50%;
               padding: 10px;
@@ -79,19 +73,12 @@
 
         </style>
 
-        <script type="text/javascript">
-            function load()
-            {
-                setTimeout("window.open(self.location, '_self');", 1000);
-            }
-        </script>
-
     </head>
-    <body  onload="load()"">
+    <body>
             <div class="row">
                 <div>
-                    <h1 style="color:#DAA520;"><center>APP-Z DEMO</center></h1>
-                    <p><center>Fully Automated Hybrid Cloud Platform</center></p>
+                    <h1 style="color:#DAA520;"><center>CloudOrbit Demo</center></h1>
+                    <h2><center>Fully Automated Multi-Cloud Management Platform</center></h2>
                 </div>
             </div>
 
@@ -119,7 +106,7 @@
                     <%@ page import="java.io.*,java.util.*"%>
                     <%
                         // Set refresh, autoload time as 1 seconds
-                        //response.setIntHeader("Refresh", 1);
+                        response.setIntHeader("Refresh", 1);
 
                         // Get current time
                         Calendar calendar = new GregorianCalendar();
@@ -135,7 +122,7 @@
                             am_pm = "PM";
                         String CT = (hour < 10 ? "0" : "") + hour + ":" + (minute < 10 ? "0" : "") + minute + ":" +  (second < 10 ? "0" : "") + second + " " + am_pm;
                      %>
-                        <label for="time"><h1>TIME: <%=CT %></h1></label>
+                        <label for="time"><h1><%=CT %></h1></label>
                 </div>
 
                 <div class="column" style="height:100px">
@@ -169,27 +156,15 @@
             </div>
 
             <div class="row">
-                <div class="gap">
-                </div>
-            </div>
-
-            <div class="row">
                 <div class="column">
                 </div>
-
-                <div class="column-50-blue" style="text-align:center; height:125px">
-                    <h4 style="color:#e1e1e1"><center>Application Server</center></h4>
-                    <h2 style="color:white;"><center><%= application.getServerInfo().indexOf('$') > 0 ? application.getServerInfo().split("/")[0] : application.getServerInfo() %></center></h2>
+                <div class="column-50" style="text-align:center; height:125px">
+                    <h3><center>Application Server</center></h3>
+                    <h2 style="color:#3377ff;"><center><%= application.getServerInfo().indexOf('$') > 0 ? application.getServerInfo().split("/")[0] : application.getServerInfo() %></center></h2>
                 </div>
                 <div class="column">
                 </div>
             </div>
 
-            <div class="row">
-
-                <div>
-                    <center><img src="cloud_logo.png" alt="CLOUDBOURNE" class="responsive" width="90px" height="50"></center>
-                </div>
-            </div>
     </body>
 </html>
