@@ -1,7 +1,7 @@
 app:
   name: Tomcat Loadgen
   code: TCLG
-  notify: mmushraf@ecloudcontrol.com
+  notify: asunil@ecloudcontrol.com
 
 build:
   version: 0.3
@@ -11,7 +11,7 @@ build:
   image_template: tomcat9
 
 deploy:
-  context: mushraf6461/DEV
+  context: athulecloud-1207/DEV
   replicas: 2
   port: 8080
   strategy : rolling
